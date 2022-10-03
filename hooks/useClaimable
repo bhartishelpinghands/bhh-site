@@ -3,8 +3,8 @@ import type { RewardTracker } from "../contracts/types";
 import useKeepSWRDataLiveAsBlocksArrive from "./useKeepSWRDataLiveAsBlocksArrive";
 import useRewardTracker from "./useRewardTracker";
 
-function getClaimable(contract: RewardTracker) {
-  return async (_: string, vaultaddress: string) => {
+function getClaimable(contract: RewardTracker, vaultaddress) {
+  return async (_: string) => {
     const balance = await contract.claimable(vaultaddress);
 
     return balance;
@@ -12,8 +12,8 @@ function getClaimable(contract: RewardTracker) {
 }
 
 export default function useClaimable(
-  vaultaddress: string,
   trackerAddress: string,
+  vaultaddress: string,
   suspense = false
 ) {
   const contract = useRewardTracker(trackerAddress);
@@ -24,8 +24,8 @@ export default function useClaimable(
     !!contract;
 
   const result = useSWR(
-    shouldFetch ? ["ETHBalance", vaultaddress, trackerAddress] : null,
-    getClaimable(contract),
+    shouldFetch ? ["ClaimableBalance", vaultaddress, trackerAddress] : null,
+    getClaimable(contract, vaultaddress),
     {
       suspense,
     }
