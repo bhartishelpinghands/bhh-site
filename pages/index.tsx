@@ -23,7 +23,7 @@ function Home() {
       </Head>
 
       <header>
-        <div class="flex justify-between ...">
+        <div>
           <nav>
           <div><Link href="/">
             <a>Home</a>
