@@ -53,7 +53,7 @@ function Home() {
       <style jsx>{`
         nav {
           display: flex;
-          justify-content: space-between;
+          justify-content: flex-start;
           color: #41d0d5;
           font-family: sans-serif;
           padding: 20px;
