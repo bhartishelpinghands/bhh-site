@@ -2,7 +2,7 @@ import { useWeb3React } from "@web3-react/core";
 import type { Web3Provider } from "@ethersproject/providers";
 import Head from "next/head";
 import Link from "next/link";
-import ClaimableBalance from "../components/Claimable";
+import ClaimableBalance from "../components/ClaimableBalance";
 import Account from "../components/Account";
 import ETHBalance from "../components/ETHBalance";
 import TokenBalance from "../components/TokenBalance";
