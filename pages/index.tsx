@@ -2,6 +2,7 @@ import { useWeb3React } from "@web3-react/core";
 import type { Web3Provider } from "@ethersproject/providers";
 import Head from "next/head";
 import Link from "next/link";
+import Claimable from "../components/Claimable";
 import Account from "../components/Account";
 import ETHBalance from "../components/ETHBalance";
 import TokenBalance from "../components/TokenBalance";
@@ -59,6 +60,7 @@ function Home() {
           </section>
         )}
         <section>
+          <ClaimableBalance vaultaddress={BHHGLP_TOKEN_ADDRESS} trackerAddress={TRACKER_ADDRESS} />
         </section>   
       </main>
 
