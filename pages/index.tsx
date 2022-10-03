@@ -25,7 +25,10 @@ function Home() {
       <header>
         <nav>
           <Link href="/">
-            <a>Bharti&apos;s Helping Hands</a>
+            <a>Home</a>
+          </Link>
+          <Link href="/vault">
+            <a>Vault</a>
           </Link>
 
           <Account triedToEagerConnect={triedToEagerConnect} />
@@ -51,10 +54,17 @@ function Home() {
         nav {
           display: flex;
           justify-content: space-between;
+          font-color: #41D0D5;
+          font-family: sans-serif;
+          padding: 20px;
+          margin: 20px;
         }
 
         main {
           text-align: center;
+          font-family: sans-serif;
+          padding: 20px;
+          margin: 20px;
         }
       `}</style>
     </div>
