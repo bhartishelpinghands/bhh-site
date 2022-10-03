@@ -6,15 +6,8 @@ interface BasicChainInformation {
 }
 
 
-function isExtendedChainInformation(
-  chainInformation: BasicChainInformation | ExtendedChainInformation
-): chainInformation is ExtendedChainInformation {
-  return !!(chainInformation as ExtendedChainInformation).nativeCurrency
-}
 
-
-
-export const CHAINS: { [chainId: number]: BasicChainInformation | ExtendedChainInformation } = {
+export const CHAINS: { [chainId: number]: BasicChainInformation } = {
   1: {
     urls: [
       process.env.infuraKey ? `https://mainnet.infura.io/v3/${process.env.infuraKey}` : undefined,
@@ -54,8 +47,6 @@ export const CHAINS: { [chainId: number]: BasicChainInformation | ExtendedChainI
       'https://mainnet.optimism.io',
     ].filter((url) => url !== undefined),
     name: 'Optimism',
-    nativeCurrency: ETH,
-    blockExplorerUrls: ['https://optimistic.etherscan.io'],
   },
   69: {
     urls: [
@@ -63,8 +54,6 @@ export const CHAINS: { [chainId: number]: BasicChainInformation | ExtendedChainI
       'https://kovan.optimism.io',
     ].filter((url) => url !== undefined),
     name: 'Optimism Kovan',
-    nativeCurrency: ETH,
-    blockExplorerUrls: ['https://kovan-optimistic.etherscan.io'],
   },
   // Arbitrum
   42161: {
@@ -73,8 +62,6 @@ export const CHAINS: { [chainId: number]: BasicChainInformation | ExtendedChainI
       'https://arb1.arbitrum.io/rpc',
     ].filter((url) => url !== undefined),
     name: 'Arbitrum One',
-    nativeCurrency: ETH,
-    blockExplorerUrls: ['https://arbiscan.io'],
   },
   421611: {
     urls: [
@@ -82,8 +69,6 @@ export const CHAINS: { [chainId: number]: BasicChainInformation | ExtendedChainI
       'https://rinkeby.arbitrum.io/rpc',
     ].filter((url) => url !== undefined),
     name: 'Arbitrum Testnet',
-    nativeCurrency: ETH,
-    blockExplorerUrls: ['https://testnet.arbiscan.io'],
   },
   // Polygon
   137: {
@@ -92,16 +77,12 @@ export const CHAINS: { [chainId: number]: BasicChainInformation | ExtendedChainI
       'https://polygon-rpc.com',
     ].filter((url) => url !== undefined),
     name: 'Polygon Mainnet',
-    nativeCurrency: MATIC,
-    blockExplorerUrls: ['https://polygonscan.com'],
   },
   80001: {
     urls: [process.env.infuraKey ? `https://polygon-mumbai.infura.io/v3/${process.env.infuraKey}` : undefined].filter(
       (url) => url !== undefined
     ),
     name: 'Polygon Mumbai',
-    nativeCurrency: MATIC,
-    blockExplorerUrls: ['https://mumbai.polygonscan.com'],
   },
 }
 
