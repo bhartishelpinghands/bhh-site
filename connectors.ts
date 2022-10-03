@@ -8,4 +8,7 @@ export const injected = new InjectedConnector({
 });
 
 
-export const [network, hooks] = initializeConnector<Network>((actions) => new Network({ actions, urlMap: URLS }))
+export const [network, hooks] = initializeConnector<Network>((actions) => new Network({ actions, urls: [
+      process.env.infuraKey ? `https://arbitrum-mainnet.infura.io/v3/${process.env.infuraKey}` : '',
+      'https://arb1.arbitrum.io/rpc',
+    ].filter((url) => url !== '') }))
