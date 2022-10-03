@@ -16,7 +16,7 @@ function Home() {
   const isConnected = typeof account === "string" && !!library;
 
   return (
-    <div>
+      <div>
       <Head>
         <title>Bharti&apos;s Helping Hands</title>
         <link rel="icon" href="/favicon.ico" />
@@ -27,11 +27,11 @@ function Home() {
           <Link href="/">
             <a>Home</a>
           </Link>
-          <p>
+          <p />
           <Link href="/vault">
             <a>Vault</a>
           </Link>
-          <p>
+          <p />
            <Account triedToEagerConnect={triedToEagerConnect} />
         </nav>
       </header>
@@ -63,14 +63,13 @@ function Home() {
           color: #41d0d5;
           }
 
-        main {
+       main {
           text-align: center;
           font-family: sans-serif;
           padding: 20px;
           margin: 20px;
         }
       `}</style>
-    
    </div>
   );
 }
