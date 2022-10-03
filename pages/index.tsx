@@ -6,7 +6,7 @@ import ETHBalance from "../components/ETHBalance";
 import TokenBalance from "../components/TokenBalance";
 import useEagerConnect from "../hooks/useEagerConnect";
 
-const DAI_TOKEN_ADDRESS = "0x6b175474e89094c44da98b954eedeac495271d0f";
+const BHHGLP_TOKEN_ADDRESS = "0x0da9d783ce7D5c562c03d07f55AE50e5Bc072895";
 
 function Home() {
   const { account, library } = useWeb3React();
@@ -18,14 +18,14 @@ function Home() {
   return (
     <div>
       <Head>
-        <title>next-web3-boilerplate</title>
+        <title>Bharti's Helping Hands</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <header>
         <nav>
           <Link href="/">
-            <a>next-web3-boilerplate</a>
+            <a>Bharti's Helping Hands</a>
           </Link>
 
           <Account triedToEagerConnect={triedToEagerConnect} />
@@ -34,17 +34,15 @@ function Home() {
 
       <main>
         <h1>
-          Welcome to{" "}
-          <a href="https://github.com/mirshko/next-web3-boilerplate">
-            next-web3-boilerplate
-          </a>
+         Bharti's Helping Hands
         </h1>
+        <h3>A pgilanthropic project in honorable memory of Bharti Patil</h3>
 
         {isConnected && (
           <section>
             <ETHBalance />
 
-            <TokenBalance tokenAddress={DAI_TOKEN_ADDRESS} symbol="DAI" />
+            <TokenBalance tokenAddress={BHHGLP_TOKEN_ADDRESS} symbol="bhhGLP" />
           </section>
         )}
       </main>
