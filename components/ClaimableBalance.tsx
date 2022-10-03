@@ -9,7 +9,7 @@ type ClaimableProps = {
 };
 
 const ClaimableBalance = ({ trackerAddress, vaultaddress }: ClaimableProps) => {
-  const data = useClaimable(trackerAddress, vaultaddress);
+  const data = await useClaimable(trackerAddress, vaultaddress);
 
   return (
     <p>
