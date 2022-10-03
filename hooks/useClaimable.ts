@@ -13,7 +13,9 @@ function getClaimable(contract: RewardTracker, vaultaddress) {
 
 export default function useClaimable(
   trackerAddress: string,
-  vaultaddress: string) {
+  vaultaddress: string,
+  suspense = false
+) {
   const contract = useRewardTracker(trackerAddress);
 
   const shouldFetch =
