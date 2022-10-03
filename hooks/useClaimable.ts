@@ -23,15 +23,7 @@ export default function useClaimable(
     typeof trackerAddress === "string" &&
     !!contract;
 
-  const result = useSWR(
-    shouldFetch ? ["ClaimableBalance", trackerAddress, vaultaddress] : null,
-    getClaimable(contract, vaultaddress),
-    {
-      suspense,
-    }
-  );
-
-  useKeepSWRDataLiveAsBlocksArrive(result.mutate);
+  const result = getClaimable(contract, vaultaddress);
 
   return result;
 }
