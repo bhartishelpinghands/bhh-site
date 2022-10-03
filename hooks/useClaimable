@@ -1,0 +1,37 @@
+import useSWR from "swr";
+import type { RewardTracker } from "../contracts/types";
+import useKeepSWRDataLiveAsBlocksArrive from "./useKeepSWRDataLiveAsBlocksArrive";
+import useRewardTracker from "./useRewardTracker";
+
+function getClaimable(contract: RewardTracker) {
+  return async (_: string, vaultaddress: string) => {
+    const balance = await contract.claimable(vaultaddress);
+
+    return balance;
+  };
+}
+
+export default function useClaimable(
+  vaultaddress: string,
+  trackerAddress: string,
+  suspense = false
+) {
+  const contract = useRewardTracker(trackerAddress);
+
+  const shouldFetch =
+    typeof vaultaddress === "string" &&
+    typeof trackerAddress === "string" &&
+    !!contract;
+
+  const result = useSWR(
+    shouldFetch ? ["ETH Balance", vaultaddress, trackerAddress] : null,
+    getClaimable(contract),
+    {
+      suspense,
+    }
+  );
+
+  useKeepSWRDataLiveAsBlocksArrive(result.mutate);
+
+  return result;
+}
