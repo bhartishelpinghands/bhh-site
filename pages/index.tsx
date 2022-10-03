@@ -45,7 +45,6 @@ function Home() {
           </p>
         </nav>
       </header>
-
       <main>
         <h1>
          Bharti&apos;s Helping Hands
