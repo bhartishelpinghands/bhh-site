@@ -25,16 +25,16 @@ function Home() {
       <header>
         <div>
           <nav>
-          <div className="nav-container"><Link href="/">
+          <div className="container"><Link href="/">
             <a>Home</a>
           </Link>
             </div>
-          <div className="nav-container">
+          <div className="container">
           <Link href="/vault">
             <a>Vault</a>
           </Link>
             </div>
-          <div className="nav-container"><Account triedToEagerConnect={triedToEagerConnect} /></div>
+          <div className="container"><Account triedToEagerConnect={triedToEagerConnect} /></div>
         </nav>
        </div>
       </header>
@@ -55,6 +55,11 @@ function Home() {
       </main>
 
       <style jsx>{`
+        container {
+          padding: 20px;
+          margin: 20px;
+        }
+        
         nav {
           display: flex;
           justify-content: flex-start;
@@ -62,10 +67,7 @@ function Home() {
           font-family: sans-serif;
         }
         
-        nav-container {
-          padding: 20px;
-          margin: 20px;
-        }
+        
         
        h1 {
           color: #41d0d5;
