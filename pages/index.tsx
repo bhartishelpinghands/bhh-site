@@ -62,7 +62,7 @@ function Home() {
           font-color: blue;
           font-family: sans-serif;
           padding: 20px;
-          margin: 20px;
+          
         }
 
         main {
