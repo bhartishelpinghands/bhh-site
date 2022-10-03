@@ -1,4 +1,5 @@
 import { useWeb3React } from "@web3-react/core";
+import type { Web3Provider } from "@ethersproject/providers";
 import Head from "next/head";
 import Link from "next/link";
 import Account from "../components/Account";
@@ -6,7 +7,11 @@ import ETHBalance from "../components/ETHBalance";
 import TokenBalance from "../components/TokenBalance";
 import useEagerConnect from "../hooks/useEagerConnect";
 
+
 const BHHGLP_TOKEN_ADDRESS = "0x0da9d783ce7D5c562c03d07f55AE50e5Bc072895";
+const TRACKER_ADDRESS = "0x4e971a87900b931fF39d1Aad67697F49835400b6";
+const GLP_MGR_ADDRESS = "0x321F653eED006AD1C29D174e17d96351BDe22649";
+const GLP_ADDRESS = "0x4277f8F2c384827B5273592FF7CeBd9f2C1ac258";
 
 function Home() {
   const { account, library } = useWeb3React();
@@ -53,6 +58,8 @@ function Home() {
             <TokenBalance tokenAddress={BHHGLP_TOKEN_ADDRESS} symbol="bhhGLP" />
           </section>
         )}
+        <section>
+        </section>   
       </main>
 
       <style jsx>{`       
