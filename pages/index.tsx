@@ -23,16 +23,20 @@ function Home() {
       </Head>
 
       <header>
-        <nav>
-          <Link href="/">
+        <div class="flex justify-between ...">
+          <nav>
+          <div><Link href="/">
             <a>Home</a>
           </Link>
+            </div>
+          <div>
           <Link href="/vault">
             <a>Vault</a>
           </Link>
-
-          <Account triedToEagerConnect={triedToEagerConnect} />
+            </div>
+          <div><Account triedToEagerConnect={triedToEagerConnect} /></div>
         </nav>
+       </div>
       </header>
 
       <main>
