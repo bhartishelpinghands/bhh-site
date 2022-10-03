@@ -25,16 +25,15 @@ function Home() {
       <header>
         <div>
           <nav>
-          <div className="container"><Link href="/">
+          <Link href="/">
             <a>Home</a>
           </Link>
-            </div>
-          <div className="container">
+          <p>
           <Link href="/vault">
             <a>Vault</a>
           </Link>
-            </div>
-          <div className="container"><Account triedToEagerConnect={triedToEagerConnect} /></div>
+          <p>
+           <Account triedToEagerConnect={triedToEagerConnect} />
         </nav>
        </div>
       </header>
