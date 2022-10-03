@@ -57,6 +57,7 @@ function Home() {
           color: #41d0d5;
           font-family: sans-serif;
           padding: 20px;
+          margin: 20px;
         }
         
        h1 {
