@@ -51,20 +51,13 @@ function Home() {
         )}
       </main>
 
-      <style jsx>{`
-        container {
-          padding: 20px;
-          margin: 20px;
-        }
-        
+      <style jsx>{`       
         nav {
           display: flex;
           justify-content: flex-start;
           color: #41d0d5;
           font-family: sans-serif;
-        }
-        
-        
+        }    
         
        h1 {
           color: #41d0d5;
@@ -77,7 +70,8 @@ function Home() {
           margin: 20px;
         }
       `}</style>
-    </div>
+    
+   </div>
   );
 }
 
