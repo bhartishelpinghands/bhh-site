@@ -24,7 +24,7 @@ export default function useClaimable(
     !!contract;
 
   const result = useSWR(
-    shouldFetch ? ["ClaimableBalance", vaultaddress, trackerAddress] : null,
+    shouldFetch ? ["ClaimableBalance", trackerAddress, vaultaddress] : null,
     getClaimable(contract, vaultaddress),
     {
       suspense,
