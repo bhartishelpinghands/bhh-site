@@ -1,11 +1,11 @@
 import { InjectedConnector } from "@web3-react/injected-connector";
-import { NetworkConnector } from '@web3-react/network-connector'
+import { initializeConnector } from '@web3-react/core'
+import { Network } from '@web3-react/network'
+import { URLS } from './chains'
 
 export const injected = new InjectedConnector({
   supportedChainIds: [1, 42161],
 });
 
-export const network = new NetworkConnector({
-  urls: { 1: RPC_URLS[1], 4: RPC_URLS[4] },
-  defaultChainId: 42161
-})
+
+export const [network, hooks] = initializeConnector<Network>((actions) => new Network({ actions, urlMap: URLS }))
