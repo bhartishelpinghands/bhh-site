@@ -23,7 +23,6 @@ function Home() {
       </Head>
 
       <header>
-        <div>
           <nav>
           <Link href="/">
             <a>Home</a>
@@ -35,7 +34,6 @@ function Home() {
           <p>
            <Account triedToEagerConnect={triedToEagerConnect} />
         </nav>
-       </div>
       </header>
 
       <main>
