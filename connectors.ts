@@ -1,5 +1,4 @@
 import { InjectedConnector } from '@web3-react/injected-connector';
-import { initializeConnector } from '@web3-react/core'
 import { Network } from '@web3-react/network'
 import type { Networkish } from '@ethersproject/networks'
 import type { BaseProvider, Web3Provider } from '@ethersproject/providers'
