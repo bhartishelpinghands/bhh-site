@@ -18,7 +18,7 @@ function Home() {
   return (
     <div>
       <Head>
-        <title>Bharti's Helping Hands</title>
+        <title>Bharti&apos;s Helping Hands</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
