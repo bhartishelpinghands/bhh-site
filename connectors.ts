@@ -1,5 +1,5 @@
 import { InjectedConnector } from "@web3-react/injected-connector";
-import function { initializeConnector } from '@web3-react/core'
+import type { initializeConnector } from '@web3-react/core'
 import { Network } from "@web3-react/network"
 
 export const injected = new InjectedConnector({
