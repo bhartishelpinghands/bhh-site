@@ -24,15 +24,19 @@ function Home() {
 
       <header>
           <nav>
+          <p>
           <Link href="/">
             <a>Home</a>
           </Link>
-          <p />
+          </p>
+          <p>
           <Link href="/vault">
             <a>Vault</a>
           </Link>
-          <p />
+          </p>
+          <p>
            <Account triedToEagerConnect={triedToEagerConnect} />
+          </p>
         </nav>
       </header>
 
@@ -54,7 +58,7 @@ function Home() {
       <style jsx>{`       
         nav {
           display: flex;
-          justify-content: flex-start;
+          justify-content: space-evenly;
           color: #41d0d5;
           font-family: sans-serif;
         }    
