@@ -5,10 +5,6 @@ interface BasicChainInformation {
   name: string
 }
 
-interface ExtendedChainInformation extends BasicChainInformation {
-  nativeCurrency: AddEthereumChainParameter['nativeCurrency']
-  blockExplorerUrls: AddEthereumChainParameter['blockExplorerUrls']
-}
 
 function isExtendedChainInformation(
   chainInformation: BasicChainInformation | ExtendedChainInformation
