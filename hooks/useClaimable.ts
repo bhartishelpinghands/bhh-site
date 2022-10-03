@@ -4,11 +4,12 @@ import useKeepSWRDataLiveAsBlocksArrive from "./useKeepSWRDataLiveAsBlocksArrive
 import useRewardTracker from "./useRewardTracker";
 
 function getClaimable(contract: RewardTracker, vaultaddress) {
+  return async (_: string) => {
     const balance = await contract.claimable(vaultaddress);
 
     return balance;
   };
-
+}
 
 export default function useClaimable(
   trackerAddress: string,
