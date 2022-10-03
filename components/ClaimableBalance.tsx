@@ -10,7 +10,7 @@ type ClaimableProps = {
 
 const ClaimableBalance = ({ trackerAddress, vaultaddress }: ClaimableProps) => {
   const data = useClaimable(trackerAddress, vaultaddress);
-  const data = BigInt(data)
+
   return (
     <p>
       {`Claimable ETH Balance`}: {parseBalance(data ?? 0)}
