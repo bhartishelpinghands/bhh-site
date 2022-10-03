@@ -51,15 +51,10 @@ function Home() {
       </main>
 
       <style jsx>{`
-        a { 
-          font-color: blue;
-          font-family: sans-serif;
-          }        
-        
         nav {
           display: flex;
           justify-content: space-between;
-          font-color: blue;
+          color: #41d0d5;
           font-family: sans-serif;
           padding: 20px;
           
