@@ -25,7 +25,7 @@ function Home() {
       <header>
         <nav>
           <Link href="/">
-            <a>Bharti's Helping Hands</a>
+            <a>Bharti&apos;s Helping Hands</a>
           </Link>
 
           <Account triedToEagerConnect={triedToEagerConnect} />
@@ -34,9 +34,9 @@ function Home() {
 
       <main>
         <h1>
-         Bharti's Helping Hands
+         Bharti&apos;s Helping Hands
         </h1>
-        <h3>A pgilanthropic project in honorable memory of Bharti Patil</h3>
+        <h3>A philanthropic project in honorable memory of Bharti Patil</h3>
 
         {isConnected && (
           <section>
