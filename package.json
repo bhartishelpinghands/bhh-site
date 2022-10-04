@@ -18,7 +18,7 @@
     "@ethersproject/wallet": "^5.5.0",
     "@metamask/detect-provider": "^1.2.0",
     "@metamask/onboarding": "^1.0.1",
-    "@web3-react/core": "^6.2.9",
+    "@web3-react/core": "^6.1.9",
     "@web3-react/injected-connector": "^6.2.9",
     "@web3-react/network-connector": "^6.2.9",
     "next": "12.1.0",
