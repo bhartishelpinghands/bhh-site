@@ -1,5 +1,3 @@
-import type { Web3Provider } from "@ethersproject/providers";
-import { useWeb3React } from "@web3-react/core";
 import useClaimable from "../hooks/useClaimable";
 import { parseBalance } from "../util";
 
@@ -13,7 +11,7 @@ const ClaimableBalance = ({ trackerAddress, vaultaddress }: ClaimableProps) => {
 
   return (
     <p>
-      {`Claimable ETH Balance`}: {parseBalance(data ?? 0)}
+      {`Earned ETH Amount for Compound Period`}: {parseBalance(data ?? 0)}
     </p>
   );
 };
