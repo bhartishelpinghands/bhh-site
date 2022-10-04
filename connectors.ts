@@ -1,13 +1,17 @@
 import { InjectedConnector } from '@web3-react/injected-connector';
-import { Network } from '@web3-react/network';
-import { initializeConnector } from '@web3-react/core';
+import { NetworkConnector } from '@web3-react/network-connector'
+
+
+const RPC_URLS: { [chainId: number]: string } = {
+  42161: process.env.RPC_URL_1 as string
+}
 
 export const injected = new InjectedConnector({
-  supportedChainIds: [1, 42161],
+  supportedChainIds: [42161],
 });
 
+export const network = new NetworkConnector({
+  urls: { 42161: RPC_URLS[42161]},
+  defaultChainId: 42161
+})
 
-export const [network, hooks] = initializeConnector<Network>((actions) => new Network({ actions, urls: [
-      process.env.infuraKey ? `https://arbitrum-mainnet.infura.io/v3/${process.env.infuraKey}` : '',
-      'https://arb1.arbitrum.io/rpc',
-    ].filter((url) => url !== '') }))
