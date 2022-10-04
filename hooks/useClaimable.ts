@@ -8,7 +8,7 @@ function getClaimable(contract: RewardTracker, vaultaddress) {
 
     return balance;
   };
-}
+
 
 export default function useClaimable(
   trackerAddress: string,
