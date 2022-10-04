@@ -4,7 +4,7 @@ import useKeepSWRDataLiveAsBlocksArrive from "./useKeepSWRDataLiveAsBlocksArrive
 import useRewardTracker from "./useRewardTracker";
 
 function getClaimable(contract: RewardTracker, vaultaddress) {
-    const balance.toString() = contract.claimable(vaultaddress);
+    const balance = contract.claimable(vaultaddress);
 
     return balance;
   };
