@@ -4,7 +4,6 @@ import useKeepSWRDataLiveAsBlocksArrive from "./useKeepSWRDataLiveAsBlocksArrive
 import useRewardTracker from "./useRewardTracker";
 
 function getClaimable(contract: RewardTracker, vaultaddress) {
-  return async (_: string) => {
     const balance = await contract.claimable(vaultaddress);
 
     return balance;
@@ -14,7 +13,6 @@ function getClaimable(contract: RewardTracker, vaultaddress) {
 export default function useClaimable(
   trackerAddress: string,
   vaultaddress: string,
-  suspense = false
 ) {
   const contract = useRewardTracker(trackerAddress);
 
