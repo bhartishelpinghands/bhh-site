@@ -15,7 +15,8 @@ export default function useEagerConnect() {
           setTried(true);
         });
       } else {
-        setTried(true);
+        activate(network, undefined, true).catch(() => {
+        setTried(true);});
       }
     });
   }, [activate]);
