@@ -1,5 +1,5 @@
 import { InjectedConnector } from '@web3-react/injected-connector';
-import { NetworkConnector } from '@web3-react/network-connector'
+import { NetworkConnector } from '@web3-react/network-connector';
 
 
 const RPC_URLS: { [chainId: number]: string } = {
