@@ -15,9 +15,9 @@ const GLP_MGR_ADDRESS = "0x321F653eED006AD1C29D174e17d96351BDe22649";
 const GLP_ADDRESS = "0x4277f8F2c384827B5273592FF7CeBd9f2C1ac258";
 
 function Home() {
-  const { account, library } = useWeb3React();
+  const { account, library, activate, active } = useWeb3React();
 
-  const triedToEagerConnect = useEagerConnect();
+  activate(network, undefined, true);
 
   const isConnected = typeof account === "string" && !!library;
 
