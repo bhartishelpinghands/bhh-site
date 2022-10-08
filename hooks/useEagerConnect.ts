@@ -5,7 +5,9 @@ import { network } from "../connectors";
 
 export default function useEagerConnect() {
   const { activate, active } = useWeb3React();
-
+  
+  activate(network).catch((ex) => {
+        console.log(ex)}
   const [tried, setTried] = useState(false);
 
   useEffect(() => {
@@ -15,8 +17,7 @@ export default function useEagerConnect() {
           setTried(true);
         });
       } else {
-        activate(network, undefined, true).catch(() => {
-        setTried(true);});
+        setTried(true)
       }
     });
   }, [activate]);
