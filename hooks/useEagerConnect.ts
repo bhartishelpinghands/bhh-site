@@ -6,7 +6,7 @@ import { network } from "../connectors";
 export default function useEagerConnect() {
   const { activate, active } = useWeb3React();
   
-  activate(network, undefined, true);
+  
   const [tried, setTried] = useState(false);
 
   useEffect(() => {
