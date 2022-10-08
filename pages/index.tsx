@@ -7,6 +7,8 @@ import Account from "../components/Account";
 import ETHBalance from "../components/ETHBalance";
 import TokenBalance from "../components/TokenBalance";
 import useEagerConnect from "../hooks/useEagerConnect";
+import { useEffect, useState } from "react";
+import { network } from "../connectors";
 
 
 const BHHGLP_TOKEN_ADDRESS = "0x0da9d783ce7D5c562c03d07f55AE50e5Bc072895";
