@@ -3,7 +3,7 @@ import { NetworkConnector } from '@web3-react/network-connector';
 
 
 const RPC_URLS: { [chainId: number]: string } = {
-  42161: "https://arb-mainnet.g.alchemy.com/v2/hHPHTyMy1PVms2P8tUgkOE1OISeFxVSZ"
+  1: 'https://arb-mainnet.g.alchemy.com/v2/hHPHTyMy1PVms2P8tUgkOE1OISeFxVSZ'
 }
 
 export const injected = new InjectedConnector({
@@ -11,7 +11,7 @@ export const injected = new InjectedConnector({
 });
 
 export const network = new NetworkConnector({
-  urls: { 42161: RPC_URLS[42161]},
+  urls: { 42161: 'https://arb-mainnet.g.alchemy.com/v2/hHPHTyMy1PVms2P8tUgkOE1OISeFxVSZ'},
   defaultChainId: 42161
 })
 
