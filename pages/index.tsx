@@ -43,7 +43,7 @@ function Home() {
           </Link>
           </p>
           <p>
-           <Account triedToEagerConnect={triedToEagerConnect} />
+           
           </p>
         </nav>
       </header>
